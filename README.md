@@ -13,7 +13,6 @@ This repository contains a simple and user-friendly YouTube video downloader. Wi
 The main interface where users can input a YouTube URL to begin downloading.
 
 ![Home Screen](https://github.com/user-attachments/assets/0cbdde80-3f25-447e-a08f-61ccfe85545e)
-ding_page_screenshot)
 
 ### 2. Entering a YouTube URL
 After pasting a YouTube video URL, users can press the download button to start the process.
