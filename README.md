@@ -27,7 +27,7 @@ Upon successful download, users will see a notification along with a link to acc
 
 
 ### 4. Download History
-The history section shows all previously downloaded videos, including the video name and the download date.
+The history section shows all previously downloaded videos.
 
 ![Download History](https://github.com/user-attachments/assets/631d18a9-f433-4fd7-9d40-cdc67479e8a4)
 
