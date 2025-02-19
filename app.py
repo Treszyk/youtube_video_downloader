@@ -9,11 +9,14 @@ ctk.set_default_color_theme('blue')
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
+        ctk.set_widget_scaling(1.2)
         self.after_task_ids = []
         self.title('Youtube Video Downloader')
         self.geometry('900x550')
-        self.minsize(800, 500)
-        self.iconbitmap('icon.ico') 
+        self.minsize(900, 550)
+        self.maxsize(900, 550)
+        self.resizable(False, False)
+        self.iconbitmap('static/icon.ico', default='static/icon.ico') 
         self.init_widgets()
 
     def init_widgets(self, curr_tab = 0):

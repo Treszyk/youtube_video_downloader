@@ -1,4 +1,4 @@
-import json
+import json, os
 class ThemeManager:
     default_theme = 'Purple'
     color_presets = {
@@ -42,6 +42,7 @@ class ThemeManager:
             print('Settings file not found. Using default theme.')
             cls.current_theme = cls.default_theme
             cls.set_colors(cls.current_theme)
+            os.remove('settings.json')
         except Exception as e:
             print(f'Error loading theme from settings.json: {e}')
 

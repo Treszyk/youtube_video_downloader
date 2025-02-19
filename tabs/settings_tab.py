@@ -1,12 +1,13 @@
 import customtkinter as ctk
 from theme_manager import ThemeManager
 from tkinter import messagebox
+from modals.custom_msgbox import CustomDialogBox
+from modals.custom_infobox import CustomInfoBox
 import os
 
 class SettingsTab(ctk.CTkFrame):
     def __init__(self, parent, reset_callback):
         super().__init__(parent, fg_color='transparent')
-
         self.reset_callback = reset_callback
 
         title = ctk.CTkLabel(self, text='Settings', font=('Arial', 22, 'bold'))
@@ -33,12 +34,8 @@ class SettingsTab(ctk.CTkFrame):
     def clear_cache(self):
         settings_file = 'settings.json'
         cache_files = [settings_file] 
-
-        response = messagebox.askyesno(
-            'Clear Cache',
-            'Are you sure you want to clear the cache? This will remove settings and temporary files.'
-        )
-
+        dialog = CustomDialogBox(self.master.master, title="Clear Cache", message="Are you sure you want to clear the cache?", confirm_callback=self.clear_cache)
+        response = dialog.wait_for_response()
         if response:
             for file in cache_files:
                 if os.path.exists(file):
@@ -49,7 +46,7 @@ class SettingsTab(ctk.CTkFrame):
                         print(f'Error deleting {file}: {e}')
                 else:
                     print(f'{file} does not exist.')
-            messagebox.showinfo('Cache Cleared', 'Cache files have been cleared successfully.')
+            CustomInfoBox(self.master.master, 'Cache Cleared', 'Cache files have been cleared successfully.')
             self.reset_callback()
         else:
             print('Cache clearing cancelled.')
