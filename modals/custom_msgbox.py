@@ -1,5 +1,7 @@
 import customtkinter as ctk
 from theme_manager import ThemeManager
+import os
+from utils import BASE_DIR
 class CustomDialogBox(ctk.CTkToplevel):
     def __init__(self, parent, title="Confirm", message="Do you want to clear the cache?", confirm_callback=None):
         super().__init__(parent)
@@ -9,7 +11,7 @@ class CustomDialogBox(ctk.CTkToplevel):
         self.resizable(False, False)
 
         self.grab_set()
-        self.after(200, lambda: self.iconbitmap("static/icon.ico"))
+        self.after(200, lambda: self.iconbitmap(os.path.join(BASE_DIR, "static", "icon.ico")))
         self.confirm_callback = confirm_callback
 
         self.response = False

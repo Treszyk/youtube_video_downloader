@@ -1,5 +1,7 @@
 import customtkinter as ctk
 from theme_manager import ThemeManager
+import os
+from utils import BASE_DIR
 
 class CustomInfoBox(ctk.CTkToplevel):
     def __init__(self, parent, title="Info", message="Operation completed successfully"):
@@ -10,7 +12,7 @@ class CustomInfoBox(ctk.CTkToplevel):
         self.resizable(False, False)
 
         self.grab_set()
-        self.after(200, lambda: self.iconbitmap("static/icon.ico"))
+        self.after(200, lambda: self.iconbitmap(os.path.join(BASE_DIR, "static", "icon.ico")))
 
         self.response = False
         
