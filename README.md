@@ -42,7 +42,7 @@ The history section will display previously downloaded videos
 
 
 ### 5. Settings tab
-Users can choose from a couple of predefined app themes, and clear the app's cache
+Users can choose from a couple of predefined app themes, and clear the app's data
 
 ![Settings tab](https://github.com/user-attachments/assets/9fe4ca34-42ff-4460-b5ae-a3fe905dd03f)
 
