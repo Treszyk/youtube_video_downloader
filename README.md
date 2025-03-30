@@ -7,10 +7,6 @@ This repository contains a simple and user-friendly YouTube video downloader. Wi
 
 This project is licensed under the GPL v3 License.
 
-## FFmpeg Notice
-
-This application includes FFmpeg executables, which are licensed under the LGPL. You are free to replace the FFmpeg executables with your own compatible versions. For more information, please see the `FFMPEG_LICENSE` file included in this package.
-
 ## Features:
 - Download YouTube videos by pasting the video URL.
 - Keep track of downloaded videos in the history section.
