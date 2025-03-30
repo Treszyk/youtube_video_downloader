@@ -5,7 +5,7 @@ This repository contains a simple and user-friendly YouTube video downloader. Wi
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the GPL v3 License.
 
 ## FFmpeg Notice
 
